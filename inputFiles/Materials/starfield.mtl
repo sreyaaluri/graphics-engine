@@ -1,0 +1,7 @@
+newmtl starfield
+
+map_Kd inputFiles/Textures/starfield.jpg
+Ka  0.5986  0.0000  0.0000
+Kd  0.5922  0.0166  0.0000
+Ks  0.5974  0.2084  0.2084
+p   100.2237

@@ -1,0 +1,8 @@
+newmtl blacktiled
+
+map_Kd inputFiles/Textures/blackTiledCube.png
+map_Ks inputFiles/Textures/blackTiledCubeSpec.png
+Ka  0.5     0.2     0.0
+Kd  0.5922  0.0166  0.0
+Ks  0.5974  0.2084  0.2084
+p   100.2237

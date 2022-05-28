@@ -1,0 +1,8 @@
+newmtl orangetiled
+
+map_Kd inputFiles/Textures/orangeTiledCube.png
+map_Ks inputFiles/Textures/orangeTiledCubeSpec.png
+Ka  0.135   0.2225  0.1575
+Kd  0.54    0.89    0.63
+Ks  0.3162  0.3162  0.3162
+p   12.8

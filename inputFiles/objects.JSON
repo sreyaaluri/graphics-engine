@@ -1,0 +1,112 @@
+{
+  "camera": {
+    "eye": [0,0,0],
+    "top": [0,1,0],
+    "at": [0,0,-1],
+    "fov": 60,
+    "d": 1,
+    "n": 0.01,
+    "f": 100
+  },
+  "lights": [
+    {
+      "type": "point",
+      "position": [12,2,0], 
+      "Ia": [0.07,0.07,0.07], 
+      "Id": [0.9,0.9,0.9],
+      "Is": [1,1,1],
+      "ac": 1,
+      "al": 0.5,
+      "aq": 0.2
+      
+    },
+    {
+      "type": "spot",
+      "position": [-3,1,-4], 
+      "direction": [0,-1,0], 
+      "Ia": [0.1,0.1,0.1], 
+      "Id": [1,1,1],
+      "Is": [1,1,1],
+      "aa": 10,
+      "ac": 0.01,
+      "al": 0.001,
+      "aq": 0.0001,
+      "theta": 40
+    },
+    {
+      "type": "dir",
+      "direction": [0,0,1], 
+      "Ia": [0.05,0.05,0.05], 
+      "Id": [1,1,1],
+      "Is": [0.3,0.3,0.3]
+    }
+  ],
+  "meshes": [
+    {
+      "model": "inputFiles/Models/cube.obj",
+      "T": [0.5, 0.3, -2],
+      "R": [45, 0.5, 1, 1],
+      "S": [0.3, 0.3, 0.3]
+    },
+    {
+      "model": "inputFiles/Models/sphere.obj",
+      "T": [-0.4, -0.1, -1] ,
+      "R": [0, 0, 0, 1],
+      "S": [0.01, 0.01, 0.01]
+    }
+  ],
+  "planes": [
+    {
+      "point":[0,-0.5,0], 
+      "normal": [0,1,0], 
+      "mtl": "inputFiles/Materials/purple.mtl",
+      "T": [50,0,0],
+      "R": [0, 0, 0, 1],
+      "S": [1, 1, 1]
+    }
+  ],
+  "particle_system": 
+  {
+    "max_particles": 10000,
+    "max_particle_life": 100,
+    "T": [0,0,-5],
+    "R": [0, 0, 0, 1],
+    "S": [1, 1, 1],
+    "generator" : {
+      "type" : "point",
+      "dist_type" : "normal",
+      "mean": 0.5,
+      "variance": 2,
+      "pos": [-1,0,-1],
+      "col": [0.5, 0.2, 1.0],
+      "v": 3,
+      "mass_range": [2,5]
+    },
+    "forces": [
+      {
+        "type" : "point attractor",
+        "G": 1,
+        "mass": 20,
+        "pos": [-3,0,-1]
+      },
+      {
+        "type" : "point repulsor",
+        "G": 0.9,
+        "mass": 20,
+        "pos": [-1,2,-1]
+      },
+      {
+        "type" : "wind",
+        "dir": [1,0,0],
+        "magnitude": 50
+      },
+      {
+        "type" : "line repulsor",
+        "G": 1.2,
+        "mass": 20,
+        "pos": [0,-2,0],
+        "dir": [0,1,0]
+      }
+    ]
+  }
+}

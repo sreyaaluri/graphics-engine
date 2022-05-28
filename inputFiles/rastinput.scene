@@ -1,0 +1,3 @@
+type rasterization
+view perspective
+objects inputFiles/objects.JSON
